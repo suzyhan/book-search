@@ -30,7 +30,7 @@ const typeDefs = gql`
 
   type Auth {
     token: ID!
-    profile: User
+    user: User
   }
 
   type Query {
@@ -39,9 +39,9 @@ const typeDefs = gql`
 
   type Mutation {
     login(email: String!, password: String!): Auth
-    addUser(username: String!, email: String!, password: String!): Auth 
+    addUser(username: String!, email: String!, password: String!): Auth
     saveBook(input: bookInput): User
-    removeBook:(bookId: String): User 
+    removeBook(bookId: String): User
   }
 `;
 

@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Book } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -39,12 +39,12 @@ const resolvers = {
       return { token, user };
     },
 
-    saveBook: async (parent, { bookData }, context) => {
+    saveBook: async (parent, { input }, context) => {
       // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { savedBooks: input }, },
+          { $addToSet: { savedBooks: input } },
           { new: true, runValidators: true }
         );
         return updatedUser;
