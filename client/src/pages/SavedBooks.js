@@ -19,7 +19,8 @@ const SavedBooks = () => {
   const { loading, data } = useQuery(GET_ME);
   const [removeBook] = useMutation(REMOVE_BOOK);
 
-  const userData = data?.me || [];
+  const userData = data?.me || {};
+  console.log(userData);
 
   // const [userData, setUserData] = useState({});
 
@@ -67,7 +68,7 @@ const SavedBooks = () => {
     } catch (err) {
       console.error(err);
     }
-    
+
     // try {
     //   const response = await deleteBook(bookId, token);
 
