@@ -22,7 +22,7 @@ npm run develop
 ```
 
 ## Usage
-- When the book search engine loads on the browser, you will be presented with the options: `Search for Books` and `Login/Signup` and an input field to search for books with a `Submit Search` button. 
+- Click on the deployed application link to open the book search engine in the browser. You will then be presented with the options: `Search for Books` and `Login/Signup` and an input field to search for books with a `Submit Search` button. 
 - Click on the `Login/Signup` button and select the `Sign up` to enter username, email, and password to submit and create an account. If you have an existing account, set the toggle to the `Login` to log in with username and password.
 - Once you are logged in, you can type in the input field to search for a book and click on `Submit Search` button to view search results. Search results should present with each featuring a book's title, author, description, and image. 
 - Click on the `Save this Book!` to save the book to your account. Click on the option to `See Your Books` to view all saved books.
