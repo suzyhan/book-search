@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.8.4",
-    "@apollo/react-hooks": "^4.0.0"
+    "@apollo/react-hooks": "^4.0.0",
+    "mongodb": "^6.1.0"
   }
 }
